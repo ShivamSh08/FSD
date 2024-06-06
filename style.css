@@ -8,21 +8,73 @@
 section {
     width: 100%;
     height: 100vh;
-    background-image: url(image/bg.png);
+    background-image: url('image/bg.png');
     background-size: cover;
     background-position: center;
 }
 
-nav {
+section nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     box-shadow: 0 0 10px #089da1;
+    background: #fff;
+    /* position: fixed; */
+    top: 0;
+    z-index: 100;
 }
 
-nav .navbar-brand img {
+.nav-center {
+    display: flex;
+    justify-content: center;
+  }
+
+section nav .navbar-brand img {
     width: 100px;
+    cursor: pointer;
+    margin: 8px 0;
+}
+
+section nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+section nav li {
+    padding: 0 10px;
+}
+
+section nav li a {
+    text-decoration: none;
+    color: #000;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+section nav li a:hover {
+    color: #fff;
+    background-color: #089da1;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 10%;
+    padding: 20px;
+}
+
+.main_tag {
+    max-width: 50%;
 }
 
 .main h1 {
     font-size: 55px;
+    margin-bottom: 20px;
 }
 
 .main h1 span {
@@ -30,25 +82,37 @@ nav .navbar-brand img {
 }
 
 .main p {
+    max-width: 650px;
     text-align: justify;
-    line-height: 22px;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
 .main_btn {
+    display: inline-block;
     background: #089da1;
+    padding: 10px 20px;
     color: #fff;
     text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
 .main_btn:hover {
-    color: #fff;
+    background-color: #067a7e;
 }
 
 .main_img img {
     width: 100%;
+    max-width: 780px;
 }
 
 
+
+.n{
+  
+    padding:  15px 0px 0px 350px;
+}
 
 /*services*/
 
@@ -84,9 +148,6 @@ nav .navbar-brand img {
 .services .services_box .services_card h3{
     margin-bottom: 10px;
 }
-
-
-
 
 /*about*/
 
@@ -124,8 +185,6 @@ nav .navbar-brand img {
     position: relative;
     top: 50px;
 }
-
-
 
 /*Books*/
 
@@ -214,8 +273,6 @@ nav .navbar-brand img {
     background: #089da1;
     border-radius: 10px;
 }
-
-
 
 
 /*arrivals*/
@@ -319,7 +376,7 @@ nav .navbar-brand img {
 
 .reviews .review_box .review_card{
     width: 400px;
-    height: 320px;
+    height: 390px;
     box-shadow: 0 0 8px #089da1;
     padding: 15px;
     margin: 0 12px;
@@ -345,38 +402,28 @@ nav .navbar-brand img {
     line-height: 22px;
 }
 
-.reviews .review_box .review_card .card .review_icon i{
+.reviews .review_box .review_card .card {
     font-size: 16px;
     float: left;
-    margin-top: 20px;
+    margin-top: px;
     color: #089da1;
     padding: 0 1px;
 }
 
-
-
-
-/*Banner*/
-
-.banner{
-    width: 100%;
-    height: 50vh;
-    background-image: url(image/banner.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-.banner .banner_btn{
-    padding: 8px 20px;
-    background: #089da1;
-    text-decoration: none;
-    color: #fff;
-    position: relative;
-    top: 70%;
-    left: 7%;
+.review_icon i{
+    font-size: 15px;
+    color: #067a7e;
 }
 
 
+
+
+
+.fa-solid{
+
+    color: rgb(0, 247, 255) !important;
+    font-size: 35px !important;
+}
 
 
 /*Blog*/
@@ -441,9 +488,6 @@ nav .navbar-brand img {
     color: #089da1;
     cursor: pointer;
 }
-
-
-
 
 /*Footer*/
 
@@ -534,4 +578,11 @@ footer .end{
 footer .end span{
     color: #089da1;
     margin-left: 10px;
+}
+
+body {
+    padding-top: 56px; /* Offset for fixed navbar */
+}
+.jumbotron {
+    margin-bottom: 0;
 }
